@@ -1,8 +1,8 @@
-# Recomendación de Venta de Tienda Alura Store para el Sr. João
+# Analisis de venta de Store Alura para el Sr. João
 
 **Fecha:** 11 de abril de 2025
 
-**Análisis Realizado:** Se analizaron los datos de ventas, rendimiento y reseñas de las cuatro tiendas de Alura Store para determinar cuál sería la menos eficiente para vender e iniciar un nuevo emprendimiento. Los principales indicadores evaluados fueron los ingresos totales y las calificaciones promedio de los clientes.
+*Análisis Realizado:* Se analizaron los datos de ventas, rendimiento y reseñas de las cuatro tiendas de Alura Store para determinar cuál sería la menos eficiente para vender e iniciar un nuevo emprendimiento. Los principales indicadores evaluados fueron los ingresos totales y las calificaciones promedio de los clientes.
 
 **Recomendación:**
 
