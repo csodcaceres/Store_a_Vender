@@ -1,128 +1,152 @@
-# Bienvenidos Store_a_Vender
+# Análisis de Datos de Alura Store
 
-Durante este proyecto, ayudaremos al Sr. Juan a decidir qué tienda de su cadena Store debe vender para iniciar un nuevo emprendimiento. Para ello, analizarás datos de ventas, rendimiento y reseñas de las 4 tiendas de Store. El objetivo es identificar la tienda menos eficiente y presentar una recomendación final basada en los datos.
+Este documento describe dos scripts de Python utilizados para analizar datos de ventas y rendimiento de cuatro tiendas de Alura Store. El objetivo principal es proporcionar información valiosa para la toma de decisiones comerciales, en particular, para determinar qué tienda podría ser menos eficiente y, por lo tanto, un buen candidato para la venta.
 
-- Cargue y manipule datos CSV con la biblioteca Pandas.
-- Cree visualizaciones de datos con la biblioteca Matplotlib.
-- Analice métricas como ingresos, reseñas y rendimiento de ventas.
+## Requisitos del Sistema
 
-### Requisitos:
+* **Python 3.6 o superior**
+* **pip** (el gestor de paquetes de Python, generalmente incluido con Python)
 
-Analizar datos de la tienda:
+## Librerías Requeridas
 
-Evaluar información como los ingresos, las categorías más vendidas, las reseñas de los clientes, los productos más vendidos y el envío promedio.
+Los scripts de Python utilizan las siguientes bibliotecas:
 
-### Crear gráficos para visualización:
+* `pandas` (para manipulación y análisis de datos)
+* `matplotlib` (para visualización de datos - solo en el script de visualización)
 
-Decidir qué tipos de gráficos utilizar para presentar los resultados de forma clara y visual.
+## Instalación de Librerías
 
-Mínimo de 3 gráficos diferentes, que pueden incluir gráficos de barras, circulares, de dispersión y otros.
+Para instalar las bibliotecas necesarias, sigue estos pasos:
 
-### Enviar una recomendación:
+1.  Abre tu terminal o línea de comandos.
+2.  Asegúrate de que Python esté correctamente instalado. Puedes verificarlo ejecutando:
 
-Después del análisis, escriba un texto explicando a qué tienda debería vender el Sr. João y por qué, basándose en los datos presentados.
+    ```bash
+    python --version
+    ```
 
-# 1: Análisis Consolidado de Datos (analisis_consolidado.py)
-Este script analiza de forma integral los datos de las tiendas, calculando métricas clave para evaluar su rendimiento.
+3.  Instala `pandas`:
 
-Carga de Datos:
+    ```bash
+    pip install pandas
+    ```
 
-- El script utiliza la biblioteca pandas para cargar los datos de cada tienda desde archivos CSV.
-- Los datos de cada tienda se almacenan en DataFrames de pandas llamados: tienda1_df, tienda2_df,   tienda3_df y tienda4_df.
+4.  Si vas a ejecutar el script de visualización, instala `matplotlib`:
 
-Análisis de Ingresos:
+    ```bash
+    pip install matplotlib
+    ```
 
-- El script calcula el ingreso total de cada tienda sumando los precios de los productos en sus respectivos DataFrames.
-- Se crea un DataFrame llamado ingresos_totales_df para comparar los ingresos totales de las distintas tiendas de manera estructurada.
+## Código 1: Análisis Consolidado de Datos (`analisis_consolidado.py`)
 
-Análisis de Categorías Más Vendidas:
+Este script realiza un análisis completo de los datos de las tiendas, calculando varias métricas clave.
 
-- El script también calcula los ingresos por categoría de producto en cada tienda, permitiendo un análisis más detallado del rendimiento por tipo de producto.
-- El script identifica las 3 categorías con mayores ingresos en cada tienda y crea DataFrames como top_categorias_tienda1_df, top_categorias_tienda2_df, etc., para mostrar claramente estas categorías destacadas.
+### Descripción del Código
 
-Análisis de Reseñas de los Clientes:
+El script realiza los siguientes análisis:
 
-- El script calcula la calificación promedio de los clientes para cada tienda y crea un DataFrame llamado calificaciones_promedio_df para facilitar la comparación entre ellas.
+1.  **Carga de Datos:**
+    * Carga los datos de cada tienda desde archivos CSV utilizando la biblioteca `pandas`.
+    * Los datos se cargan en DataFrames de pandas (`tienda1_df`, `tienda2_df`, `tienda3_df`, `tienda4_df`).
 
-Análisis de Productos Más Vendidos:
+2.  **Análisis de Ingresos:**
+    * Calcula el ingreso total para cada tienda sumando los precios de los productos.
+    * Crea un DataFrame (`ingresos_totales_df`) para comparar los ingresos totales entre las tiendas.
 
-- Se calculan los ingresos por producto en cada tienda, se identifican los 5 productos con mayores ingresos y se crean DataFrames como top_productos_tienda1_df, top_productos_tienda2_df, etc., para mostrar estos productos destacados.
+3.  **Análisis de Categorías Más Vendidas:**
+    * Calcula los ingresos por categoría de producto para cada tienda.
+    * Identifica las 3 categorías principales que generan más ingresos en cada tienda.
+    * Crea DataFrames (`top_categorias_tienda1_df`, etc.) para mostrar las categorías principales.
 
-Análisis del Envío Promedio:
+4.  **Análisis de Reseñas de los Clientes:**
+    * Calcula la calificación promedio de los clientes para cada tienda.
+    * Crea un DataFrame (`calificaciones_promedio_df`) para comparar las calificaciones promedio.
 
-- Se calcula el costo de envío promedio para cada tienda y se crea un DataFrame llamado costos_envio_promedio_df para comparar estos costos entre las tiendas.
+5.  **Análisis de Productos Más Vendidos:**
+    * Calcula los ingresos generados por cada producto en cada tienda.
+    * Identifica los 5 productos principales que generan más ingresos.
+    * Crea DataFrames (`top_productos_tienda1_df`, etc.) para mostrar los productos principales.
 
-Impresión de Resultados:
+6.  **Análisis del Envío Promedio:**
+    * Calcula el costo de envío promedio para cada tienda.
+    * Crea un DataFrame (`costos_envio_promedio_df`) para comparar los costos de envío promedio.
 
-- Se imprimen todos los resultados del análisis en la consola, organizados por sección. Esto incluye ingresos totales, calificaciones promedio, costos de envío, ingresos por categoría, principales categorías y productos, permitiendo una visualización clara y estructurada de la información.
-
-Uso
-- Asegúrate de tener Python y pandas instalados.
-
-- Coloca el script (analisis_consolidado.py) y los archivos CSV de las tiendas en el mismo directorio (o ajusta las rutas en el script).
-
-- Ejecuta el script desde la terminal:
-
-python analisis_consolidado.py
-
-Código 2: Visualización de Datos (visualizacion_datos.py)
-Este script genera visualizaciones de los datos de las tiendas para facilitar la comprensión de los resultados del análisis.
-
-Descripción del Código
-El script realiza los siguientes análisis y visualizaciones:
-
-Carga de Datos:
-
-Similar al script anterior, carga los datos de las tiendas en DataFrames de pandas.
-Análisis de Ingresos:
-
-Calcula el ingreso total para cada tienda.
-Crea un DataFrame (ingresos_totales_df) para los datos de ingresos.
-Análisis de Reseñas de los Clientes:
-
-Calcula la calificación promedio para cada tienda.
-Crea un DataFrame (calificaciones_promedio_df) para los datos de calificaciones.
-Visualizaciones:
-
-Gráfico de Barras: Ingresos Totales por Tienda:
-Crea un gráfico de barras para comparar los ingresos totales entre las tiendas.
-Gráfico de Barras: Calificación Promedio por Tienda:
-Crea un gráfico de barras para comparar las calificaciones promedio entre las tiendas.
-Gráfico Circular: Distribución de Ingresos por Tienda:
-Crea un gráfico circular para mostrar la distribución porcentual de los ingresos totales entre las tiendas.
+7.  **Impresión de Resultados:**
+    * Imprime todos los resultados de los análisis en la consola, organizados por sección.
 
 ### Uso
-Asegúrate de tener Python, pandas y matplotlib instalados.
 
-Coloca el script (visualizacion_datos.py) y los archivos CSV de las tiendas en el mismo directorio (o ajusta las rutas en el script).
+1.  Asegúrate de tener Python y `pandas` instalados.
+2.  Coloca el script (`analisis_consolidado.py`) y los archivos CSV de las tiendas en el mismo directorio (o ajusta las rutas en el script).
+3.  Ejecuta el script desde la terminal:
 
-Ejecuta el script desde la terminal:
+    ```bash
+    python analisis_consolidado.py
+    ```
 
+## Código 2: Visualización de Datos (`visualizacion_datos.py`)
+
+Este script genera visualizaciones de los datos de las tiendas para facilitar la comprensión de los resultados del análisis.
+
+### Descripción del Código
+
+El script realiza los siguientes análisis y visualizaciones:
+
+1.  **Carga de Datos:**
+    * Similar al script anterior, carga los datos de las tiendas en DataFrames de pandas.
+
+2.  **Análisis de Ingresos:**
+    * Calcula el ingreso total para cada tienda.
+    * Crea un DataFrame (`ingresos_totales_df`) para los datos de ingresos.
+
+3.  **Análisis de Reseñas de los Clientes:**
+    * Calcula la calificación promedio para cada tienda.
+    * Crea un DataFrame (`calificaciones_promedio_df`) para los datos de calificaciones.
+
+4.  **Visualizaciones:**
+    * **Gráfico de Barras: Ingresos Totales por Tienda:**
+        * Crea un gráfico de barras para comparar los ingresos totales entre las tiendas.
+    * **Gráfico de Barras: Calificación Promedio por Tienda:**
+        * Crea un gráfico de barras para comparar las calificaciones promedio entre las tiendas.
+    * **Gráfico Circular: Distribución de Ingresos por Tienda:**
+        * Crea un gráfico circular para mostrar la distribución porcentual de los ingresos totales entre las tiendas.
+
+### Uso
+
+1.  Asegúrate de tener Python, `pandas` y `matplotlib` instalados.
+2.  Coloca el script (`visualizacion_datos.py`) y los archivos CSV de las tiendas en el mismo directorio (o ajusta las rutas en el script).
+3.  Ejecuta el script desde la terminal:
+
+    ```bash
     python visualizacion_datos.py
+    ```
 
-### Recomendación de Venta (recomendacion.md)
+## Recomendación de Venta (`recomendacion.md`)
 
 Además de los scripts, se proporciona una recomendación en formato Markdown sobre qué tienda vender.
 
-Contenido de la Recomendación
+### Contenido de la Recomendación
+
 El archivo Markdown contiene:
 
-- Análisis Realizado: Una descripción del análisis realizado (ingresos totales y calificaciones promedio).
-- Recomendación: La recomendación de vender la Tienda 4.
-- Justificación Basada en los Datos: La justificación de la recomendación, basada en los ingresos totales y las calificaciones promedio.
-- Implicaciones para el Sr. João: Las implicaciones de la venta para el propietario del negocio.
-- Limitaciones: Las limitaciones del análisis (por ejemplo, no considerar costos operativos).
-- Conclusión: Una conclusión que reafirma la recomendación.
+* **Análisis Realizado:** Una descripción del análisis realizado (ingresos totales y calificaciones promedio).
+* **Recomendación:** La recomendación de vender la Tienda 4.
+* **Justificación Basada en los Datos:** La justificación de la recomendación, basada en los ingresos totales y las calificaciones promedio.
+* **Implicaciones para el Sr. João:** Las implicaciones de la venta para el propietario del negocio.
+* **Limitaciones:** Las limitaciones del análisis (por ejemplo, no considerar costos operativos).
+* **Conclusión:** Una conclusión que reafirma la recomendación.
 
-Estructura de Datos
+## Estructura de Datos
+
 Los conjuntos de datos de las tiendas contienen la siguiente información:
 
-- Producto y Categoría: Artículos vendidos y sus categorías.
-- Precio y Envío: Valores de venta y costos asociados.
-- Fecha y Lugar de Compra: Información temporal y geográfica.
-- Evaluación de Compra: Comentarios de clientes (calificaciones).
-- Tipo de Pago y Cuotas: Métodos de pago utilizados.
-- Coordenadas Geográficas: Ubicación de las transacciones (latitud y longitud).
+* **Producto y Categoría:** Artículos vendidos y sus categorías.
+* **Precio y Envío:** Valores de venta y costos asociados.
+* **Fecha y Lugar de Compra:** Información temporal y geográfica.
+* **Evaluación de Compra:** Comentarios de clientes (calificaciones).
+* **Tipo de Pago y Cuotas:** Métodos de pago utilizados.
+* **Coordenadas Geográficas:** Ubicación de las transacciones (latitud y longitud).
 
-- Conclusión
-Estos análisis y la recomendación ofrecen un marco integral para evaluar los datos de Alura Store y tomar decisiones informadas sobre la venta de una tienda. Las herramientas utilizadas son claras, modulares y fáciles de entender, lo que permite su mantenimiento y adaptación a futuras necesidades.
+## Conclusión
+
+Estos scripts y la recomendación proporcionan un marco completo para analizar los datos de Alura Store y tomar decisiones informadas sobre la venta de una tienda. Los scripts están diseñados para ser claros, modulares y fáciles de entender, lo que facilita su mantenimiento y adaptación a futuras necesidades.
