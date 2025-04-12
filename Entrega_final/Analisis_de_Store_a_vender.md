@@ -46,8 +46,4 @@ Este análisis se basó principalmente en **ingresos totales** y **calificacione
 ## 🧾 Conclusión
 
 Se aconseja al Sr. João proceder con la **venta de la Tienda 4**, ya que es la decisión más **razonable y respaldada por los datos** disponibles para comenzar su nuevo emprendimiento con una base más sólida.
-"""
 
-path_md = "/mnt/data/Analisis_Venta_Tienda_Optimizado.md"
-Path(path_md).write_text(contenido_md, encoding="utf-8")
-path_md
