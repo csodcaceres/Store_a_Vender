@@ -4,12 +4,12 @@
 
 import pandas as pd
 
-url = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science-latam/refs/heads/main/base-de-datos-challenge1-latam/tienda_1%20.csv"
+url1 = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science-latam/refs/heads/main/base-de-datos-challenge1-latam/tienda_1%20.csv"
 url2 = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science-latam/refs/heads/main/base-de-datos-challenge1-latam/tienda_2.csv"
 url3 = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science-latam/refs/heads/main/base-de-datos-challenge1-latam/tienda_3.csv"
 url4 = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science-latam/refs/heads/main/base-de-datos-challenge1-latam/tienda_4.csv"
 
-tienda = pd.read_csv(url)
+tienda1 = pd.read_csv(url1)
 tienda2 = pd.read_csv(url2)
 tienda3 = pd.read_csv(url3)
 tienda4 = pd.read_csv(url4)
@@ -17,10 +17,10 @@ tienda4 = pd.read_csv(url4)
 
 
 # Analisis de ingresos
-ingreso_tienda1 = tienda['Precio'].sum()
-ingreso_tienda2 = tienda['Precio'].sum()
-ingreso_tienda3 = tienda['Precio'].sum()
-ingreso_tienda4 = tienda['Precio'].sum()
+ingreso_tienda1 = tienda1['Precio'].sum()
+ingreso_tienda2 = tienda2['Precio'].sum()
+ingreso_tienda3 = tienda3['Precio'].sum()
+ingreso_tienda4 = tienda4['Precio'].sum()
 
 # Ingresos totales
 ingresos_totales_df = pd.DataFrame({
@@ -28,4 +28,6 @@ ingresos_totales_df = pd.DataFrame({
     'Ingreso Total': [ingreso_tienda1, ingreso_tienda2, ingreso_tienda3, ingreso_tienda4]
 })
 
-tienda.head()
+print(type(ingresos_totales_df))
+
+tienda1.head()
