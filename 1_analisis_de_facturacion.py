@@ -26,7 +26,7 @@ ingreso_tienda4 = tienda4_df['Precio'].sum()
 ingresos_totales_df = pd.DataFrame({
     'Tienda': ['Tienda 1', 'Tienda 2', 'Tienda 3', 'Tienda 4'],
     'Ingreso Total': [ingreso_tienda1, ingreso_tienda2, ingreso_tienda3, ingreso_tienda4]
-})
+}).fillna(0)
 
 # --- 4. Visualizar los ingresos totales ---
 # Utilizamos un gráfico de barras para comparar visualmente los ingresos
