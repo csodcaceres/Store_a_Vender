@@ -45,7 +45,7 @@ Este análisis realiza un estudio detallado sobre el rendimiento de cada tienda,
 3. **Categorías Más Rentables**
    - Calcula ingresos por categoría en cada tienda
    - Identifica las 3 categorías que más generan
-   - Se crean `top_categorias_tiendaX_df` para visualización
+   - Se crean `top_categorias_tienda_df` para visualización
 
 4. **Calificación Promedio**
    - Calcula la media de calificaciones de los clientes por tienda
@@ -54,7 +54,7 @@ Este análisis realiza un estudio detallado sobre el rendimiento de cada tienda,
 5. **Productos Más Vendidos**
    - Suma ingresos por producto
    - Identifica los 5 productos más lucrativos
-   - Se crean `top_productos_tiendaX_df` por tienda
+   - Se crean `top_productos_tienda_df` por tienda
 
 6. **Costo de Envío Promedio**
    - Calcula el promedio del costo de envío por tienda
