@@ -120,6 +120,10 @@ Los datos por tienda incluyen:
 - Coordenadas geográficas de transacciones
 
 ---
+
+Este conjunto de herramientas proporciona un marco sólido para analizar los datos de Alura Store y tomar decisiones informadas.  
+Los análisis son **claros, modulares y fáciles de mantener o adaptar** a futuros escenarios comerciales.
+
 ## 📄 Licencia
 
 Estos proyectos se distribuye bajo la licencia MIT. Puedes modificarlo y reutilizarlo libremente.
@@ -129,6 +133,3 @@ Estos proyectos se distribuye bajo la licencia MIT. Puedes modificarlo y reutili
 Oscar Daniel Cáceres
 
 ## ✅ Conclusión Final
-
-Este conjunto de herramientas proporciona un marco sólido para analizar los datos de Alura Store y tomar decisiones informadas.  
-Los análisis son **claros, modulares y fáciles de mantener o adaptar** a futuros escenarios comerciales.
