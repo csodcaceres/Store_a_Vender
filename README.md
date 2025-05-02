@@ -120,6 +120,13 @@ Los datos por tienda incluyen:
 - Coordenadas geográficas de transacciones
 
 ---
+## 📄 Licencia
+
+Estos proyectos se distribuye bajo la licencia MIT. Puedes modificarlo y reutilizarlo libremente.
+
+## 🧑‍💻 Autor
+
+Oscar Daniel Cáceres
 
 ## ✅ Conclusión Final
 
