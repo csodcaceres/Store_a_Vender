@@ -1,7 +1,7 @@
 
-# 📊 Análisis de Datos de Alura Store
+# 📊 Descripción del Proyecto
 
-Este documento describe dos programas en Python utilizados para analizar datos de ventas y rendimiento de cuatro tiendas de **Alura Store**. El objetivo principal es proporcionar información valiosa para la **toma de decisiones comerciales**, especialmente en relación con la venta de la tienda menos eficiente.
+Store_a_Vender es una aplicación diseñada para analizar los datos de ventas y rendimiento de cuatro tiendas de Alura Store. La aplicación permite realizar análisis detallados sobre las ventas, productos más vendidos, comparación de rendimiento entre tiendas y otras métricas clave. Está orientada a ayudar a los gerentes de las tiendas a tomar decisiones informadas para optimizar sus operaciones.
 
 ---
 
